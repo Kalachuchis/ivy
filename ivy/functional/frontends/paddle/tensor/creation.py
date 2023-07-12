@@ -131,3 +131,8 @@ def diagflat(x, offset=0, name=None):
 @to_ivy_arrays_and_back
 def meshgrid(*args, **kwargs):
     return ivy.meshgrid(*args, indexing="ij")
+
+
+@to_ivy_arrays_and_back
+def clone(x):
+    return ivy.copy_array(x)
